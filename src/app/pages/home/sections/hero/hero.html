@@ -1,0 +1,18 @@
+<div class="hero">
+
+  <div 
+    class="slide"
+    *ngFor="let slide of slides; let i = index"
+    [class.active]="i === currentIndex"
+    [style.backgroundImage]="'url(' + slide.image + ')'"
+  >
+    <div class="overlay"></div>
+
+    <div class="content container">
+      <h1>{{ slide.title }}</h1>
+      <p>{{ slide.subtitle }}</p>
+      <button class="btn">Ver menú</button>
+    </div>
+  </div>
+
+</div>

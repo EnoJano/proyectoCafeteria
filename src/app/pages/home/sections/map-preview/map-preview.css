@@ -1,0 +1,51 @@
+.map-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.map-section h2 {
+  margin-bottom: 40px;
+}
+
+/* Contenedor */
+.map-container {
+  display: grid;
+  gap: 20px;
+}
+
+/* Mapa */
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Info */
+.map-info {
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.map-info h3 {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.map-info p {
+  margin-bottom: 15px;
+  color: var(--text-secondary);
+}
+
+/* 📱 Tablet */
+@media (min-width: 768px) {
+  .map-container {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+
+  iframe {
+    height: 400px;
+  }
+}

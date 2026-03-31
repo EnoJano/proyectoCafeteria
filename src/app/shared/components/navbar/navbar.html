@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="container nav-content">
+
+    <!-- Logo -->
+    <div class="logo">
+      ☕ Cafetería
+    </div>
+
+    <!-- Links -->
+    <ul class="nav-links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Menú</a></li>
+      <li><a href="#">Cómo llegar</a></li>
+    </ul>
+
+    <!-- Acciones -->
+    <div class="actions">
+      <button 
+      class="theme-btn" 
+      [class.pulse]="pulseActive"
+      (click)="toggleTheme()"
+
+        <span class="icon" [class.rotate]="!themeService.isDarkMode()">
+          {{ themeService.isDarkMode() ? '🌙' : '☀️' }}
+        </span>
+      </button>
+      <button>ES</button>
+    </div>
+
+  </div>
+</nav>

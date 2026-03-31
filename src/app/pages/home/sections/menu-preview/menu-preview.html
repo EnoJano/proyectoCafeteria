@@ -1,0 +1,29 @@
+<section class="menu-preview">
+    <div class="container">
+
+        <h2>Nuestro menú</h2>
+
+        <div class="grid">
+
+            <div class="card" *ngFor="let product of products">
+                <div class="image-container">
+                    <div class="image" [style.backgroundImage]="'url(' + product.image + ')'"></div>
+
+
+                    <div class="overlay"></div>
+                </div>
+                <div class="overlay-content">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.price }}</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="btn-container">
+            <button class="btn">Ver menú completo</button>
+        </div>
+
+    </div>
+</section>
