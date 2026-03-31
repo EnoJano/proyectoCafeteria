@@ -5,7 +5,10 @@
 
         <div class="grid">
 
-            <div class="card" *ngFor="let product of products">
+            <div class="card animate"
+            appScrollAnimate 
+            *ngFor="let product of products; let i = index"
+            [style.transitionDelay]="(i % 4)* 100 + 'ms'">
                 <div class="image-container">
                     <div class="image" [style.backgroundImage]="'url(' + product.image + ')'"></div>
 
