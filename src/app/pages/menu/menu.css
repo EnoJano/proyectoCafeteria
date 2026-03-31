@@ -1,0 +1,64 @@
+.menu-page {
+  padding: 100px 0;
+}
+
+.menu-page h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.category {
+  margin-bottom: 50px;
+}
+
+.category h2 {
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+/* Card */
+.card {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen */
+.image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Info */
+.info {
+  padding: 15px;
+}
+
+.info p {
+  color: var(--accent);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

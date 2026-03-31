@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollAnimate } from "../../../../shared/directives/scroll-animate";
+import { RouterLink, RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-menu-preview',
   standalone: true,
-  imports: [CommonModule, TranslateModule, ScrollAnimate],
+  imports: [CommonModule, TranslateModule, ScrollAnimate, RouterLink, RouterModule],
   templateUrl: './menu-preview.html',
   styleUrl: './menu-preview.css',
 })

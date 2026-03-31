@@ -7,7 +7,9 @@
     <div class="content container">
       <h1>{{ ('HERO.SLIDES.' + i + '.TITLE') | translate }}</h1>
       <p>{{ ('HERO.SLIDES.' + i + '.SUBTITLE') | translate }}</p>
-      <button class="btn">{{ 'HERO.BUTTON' | translate }}</button>
+      <button class="btn" routerLink="/menu">
+        {{ 'HERO.BUTTON' | translate }}
+      </button>
     </div>
   </div>
 
