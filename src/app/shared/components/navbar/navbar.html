@@ -8,20 +8,21 @@
 
     <!-- Links -->
     <ul class="nav-links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Menú</a></li>
-      <li><a href="#">Cómo llegar</a></li>
+      <li><a href="#">{{ 'NAV.HOME' | translate }}</a></li>
+      <li><a href="#">{{ 'NAV.MENU' | translate }}</a></li>
+      <li><a href="#">{{ 'NAV.MAP' | translate }}</a></li>
     </ul>
 
     <!-- Acciones -->
     <div class="actions">
       <button class="theme-btn" [class.pulse]="pulseActive" (click)="toggleTheme()">
-        <span class="icon"
-        [class.rotate]="!themeService.isDarkMode()">
-        {{ themeService.isDarkMode() ? '🌙' : '☀️' }}
+        <span class="icon" [class.rotate]="!themeService.isDarkMode()">
+          {{ themeService.isDarkMode() ? '🌙' : '☀️' }}
         </span>
       </button>
-      <button>ES</button>
+      <button (click)="toggleLanguage()">
+        {{ languageService.getCurrentLang().toUpperCase() }}
+      </button>
     </div>
 
   </div>

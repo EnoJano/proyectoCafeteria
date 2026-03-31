@@ -1,17 +1,13 @@
 <div class="hero">
 
-  <div 
-    class="slide"
-    *ngFor="let slide of slides; let i = index"
-    [class.active]="i === currentIndex"
-    [style.backgroundImage]="'url(' + slide.image + ')'"
-  >
+  <div class="slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"
+    [style.backgroundImage]="'url(' + slide.image + ')'">
     <div class="overlay"></div>
 
     <div class="content container">
-      <h1>{{ slide.title }}</h1>
-      <p>{{ slide.subtitle }}</p>
-      <button class="btn">Ver menú</button>
+      <h1>{{ ('HERO.SLIDES.' + i + '.TITLE') | translate }}</h1>
+      <p>{{ ('HERO.SLIDES.' + i + '.SUBTITLE') | translate }}</p>
+      <button class="btn">{{ 'HERO.BUTTON' | translate }}</button>
     </div>
   </div>
 

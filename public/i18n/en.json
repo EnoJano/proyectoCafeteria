@@ -1,0 +1,33 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "MENU": "Menu",
+    "MAP": "Location"
+  },
+  "HERO": {
+    "SLIDES": [
+      {
+        "TITLE": "Specialty Coffee",
+        "SUBTITLE": "Discover unique flavors in every cup"
+      },
+      {
+        "TITLE": "Urban atmosphere",
+        "SUBTITLE": "A place to enjoy and disconnect"
+      },
+      {
+        "TITLE": "Made with passion",
+        "SUBTITLE": "Every coffee tells a story"
+      }
+    ],
+    "BUTTON": "View Menu"
+  },
+  "MENU": {
+    "TITLE": "Our Menu",
+    "BUTTON": "View Full Menu"
+  },
+  "MAP": {
+    "TITLE": "Find Us",
+    "LOCATION": "Our Location",
+    "BUTTON": "Open in Google Maps"
+  }
+}

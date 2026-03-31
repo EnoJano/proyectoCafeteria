@@ -1,0 +1,33 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "MENU": "Menú",
+    "MAP": "Cómo llegar"
+  },
+  "HERO": {
+    "SLIDES": [
+      {
+        "TITLE": "Café de especialidad",
+        "SUBTITLE": "Descubre sabores únicos en cada taza"
+      },
+      {
+        "TITLE": "Ambiente urbano",
+        "SUBTITLE": "Un espacio para disfrutar y desconectar"
+      },
+      {
+        "TITLE": "Hecho con pasión",
+        "SUBTITLE": "Cada café cuenta una historia"
+      }
+    ],
+    "BUTTON": "Ver menú"
+  },
+  "MENU": {
+    "TITLE": "Nuestro menú",
+    "BUTTON": "Ver menú completo"
+  },
+  "MAP": {
+    "TITLE": "Cómo llegar",
+    "LOCATION": "Nuestra ubicación",
+    "BUTTON": "Abrir en Google Maps"
+  }
+}
