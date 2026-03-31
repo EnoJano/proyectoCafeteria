@@ -13,7 +13,7 @@ export class Navbar {
 
   pulseActive = false;
 
-  ToggleTheme() {
+  toggleTheme() {
     this.themeService.toggleTheme();
 
     this.pulseActive = true;

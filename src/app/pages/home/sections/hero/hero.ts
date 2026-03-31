@@ -43,7 +43,7 @@ export class Hero implements OnInit, OnDestroy {
     this.interval = setInterval(() => {
       this.nextSlide();
       this.cdr.detectChanges();
-    }, 2000);
+    }, 3500);
   }
 
   nextSlide() {
