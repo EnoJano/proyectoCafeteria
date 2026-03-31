@@ -3,8 +3,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -86,4 +84,28 @@ body {
     opacity: 1;
     filter: blur(0);
   }
+}
+
+/* Estado inicial */
+.animate {
+  opacity: 0;
+  transition: all 0.6s ease;
+  transform: translateY(40px) scale(0.95);
+}
+
+/* Dirección ↓ */
+.fade-up {
+  transform: translateY(50px);
+}
+
+/* Dirección ↑ */
+.fade-down {
+  transform: translateY(-50px);
+}
+
+/* Cuando aparece */
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }

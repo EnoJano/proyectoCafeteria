@@ -14,7 +14,7 @@ export class MenuPreview {
     {
       name: 'Latte',
       price: '$3.500',
-      image: 'https://images.unsplash.com/photo-1521305916504-4a1121188589?q=80&w=800'
+      image: 'https://i0.wp.com/foodandwineespanol.com/wp-content/uploads/2024/01/Diseno-sin-titulo-34.webp?fit=2560%2C1440&ssl=1'
     },
     {
       name: 'Espresso',
