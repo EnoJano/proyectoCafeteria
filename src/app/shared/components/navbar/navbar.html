@@ -8,9 +8,23 @@
 
     <!-- Links -->
     <ul class="nav-links">
-      <li><a href="#">{{ 'NAV.HOME' | translate }}</a></li>
-      <li><a href="#">{{ 'NAV.MENU' | translate }}</a></li>
-      <li><a href="#">{{ 'NAV.MAP' | translate }}</a></li>
+      <li>
+        <a (click)="scrollTo('inicio')" [class.active]="activeSection === 'inicio'">
+          {{ 'NAV.HOME' | translate }}
+        </a>
+      </li>
+
+      <li>
+        <a (click)="scrollTo('menu')" [class.active]="activeSection === 'menu'">
+          {{ 'NAV.MENU' | translate }}
+        </a>
+      </li>
+
+      <li>
+        <a (click)="scrollTo('mapa')" [class.active]="activeSection === 'mapa'">
+          {{ 'NAV.MAP' | translate }}
+        </a>
+      </li>
     </ul>
 
     <!-- Acciones -->
