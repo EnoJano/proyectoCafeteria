@@ -1,0 +1,78 @@
+.footer {
+  background-color: var(--bg-secondary);
+  padding: 60px 0 20px;
+  margin-top: 60px;
+}
+
+/* Contenido principal */
+.footer-content {
+  display: grid;
+  gap: 30px;
+  text-align: center;
+}
+
+/* Brand */
+.footer-brand h3 {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.footer-brand p {
+  color: var(--text-secondary);
+}
+
+/* Links */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+/* Redes */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-social a {
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--accent);
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* 💻 Desktop */
+@media (min-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+
+  .footer-links,
+  .footer-social {
+    align-items: flex-start;
+  }
+}

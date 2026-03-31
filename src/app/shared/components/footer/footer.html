@@ -1,1 +1,35 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="container footer-content">
+
+    <!-- Logo -->
+    <div class="footer-brand">
+      <h3>☕ Cafetería</h3>
+      <p>{{ 'FOOTER.TITLE' | translate }}</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-links">
+      <a (click)="scrollTo('inicio')">
+        {{ 'NAV.HOME' | translate }}
+      </a>
+      <a (click)="scrollTo('menu')">
+        {{ 'NAV.MENU' | translate }}
+      </a>
+      <a (click)="scrollTo('mapa')">
+        {{ 'NAV.MAP' | translate }}
+      </a>
+    </div>
+
+    <!-- Redes -->
+    <div class="footer-social">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">WhatsApp</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>{{ 'FOOTER.SUBTITLE' | translate }}</p>
+  </div>
+</footer>

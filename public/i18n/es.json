@@ -29,5 +29,9 @@
     "TITLE": "Cómo llegar",
     "LOCATION": "Nuestra ubicación",
     "BUTTON": "Abrir en Google Maps"
+  },
+  "FOOTER":{
+    "TITLE": "Especialidad, pasión y sabor.",
+    "SUBTITLE": "© 2026 Cafetería. Todos los derechos reservados."
   }
 }

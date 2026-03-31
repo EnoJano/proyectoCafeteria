@@ -29,5 +29,9 @@
     "TITLE": "Find Us",
     "LOCATION": "Our Location",
     "BUTTON": "Open in Google Maps"
+  },
+  "FOOTER":{
+    "TITLE": "Specialty, passion, and flavor.",
+    "SUBTITLE": "© 2026 Cafetería. All rights reserved."
   }
 }
