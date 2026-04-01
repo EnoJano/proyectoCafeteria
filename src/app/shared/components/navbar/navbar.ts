@@ -2,13 +2,13 @@ import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { Theme } from '../../../core/services/theme';
 import { TranslateModule } from '@ngx-translate/core';
 import { Language } from '../../../core/services/language';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [TranslateModule, CommonModule, RouterLink],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
