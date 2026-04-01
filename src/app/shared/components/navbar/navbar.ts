@@ -23,12 +23,18 @@ export class Navbar {
 
   isMenuPage = false;
 
+  isMenuOpen = false;
+
   ngOnInit() {
     this.onScroll();
 
     this.router.events.subscribe(() => {
       this.isMenuPage = this.router.url.includes('menu');
     });
+  }
+
+  toggleMenu(){
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   toggleTheme() {

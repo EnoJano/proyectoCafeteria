@@ -7,21 +7,21 @@
     </div>
 
     <!-- Links -->
-    <ul class="nav-links">
+    <ul class="nav-links" [class.open]="isMenuOpen">
       <li>
-        <a (click)="scrollTo('inicio')" [class.active]="activeSection === 'inicio'">
+        <a (click)="scrollTo('inicio'); isMenuOpen = false" [class.active]="activeSection === 'inicio'" >
           {{ 'NAV.HOME' | translate }}
         </a>
       </li>
 
       <li>
-        <a (click)="scrollTo('menu')" [class.active]="activeSection === 'menu'">
+        <a (click)="scrollTo('menu'); isMenuOpen = false" [class.active]="activeSection === 'menu'">
           {{ 'NAV.MENU' | translate }}
         </a>
       </li>
 
       <li>
-        <a (click)="scrollTo('mapa')" [class.active]="activeSection === 'mapa'">
+        <a (click)="scrollTo('mapa'); isMenuOpen = false" [class.active]="activeSection === 'mapa'">
           {{ 'NAV.MAP' | translate }}
         </a>
       </li>
@@ -29,6 +29,10 @@
 
     <!-- Acciones -->
     <div class="actions">
+      <button class="hamburger" (click)="toggleMenu()">
+        ☰
+      </button>
+
       <button class="theme-btn" [class.pulse]="pulseActive" (click)="toggleTheme()">
         <span class="icon" [class.rotate]="!themeService.isDarkMode()">
           {{ themeService.isDarkMode() ? '🌙' : '☀️' }}

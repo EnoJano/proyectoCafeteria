@@ -7,6 +7,15 @@
   
 }
 
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
 .nav-content {
   display: flex;
   justify-content: space-between;
@@ -106,3 +115,33 @@
   }
 }
 
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-primary);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
