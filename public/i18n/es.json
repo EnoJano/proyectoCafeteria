@@ -23,7 +23,12 @@
   },
   "MENU": {
     "TITLE": "Nuestro menú",
-    "BUTTON": "Ver menú completo"
+    "BUTTON": "Ver menú completo",
+    "PRODUCTS":{
+      "TODOS": "Todos",
+      "CAFE": "Café",
+      "POSTRES": "Postres"
+    }
   },
   "MAP": {
     "TITLE": "Cómo llegar",

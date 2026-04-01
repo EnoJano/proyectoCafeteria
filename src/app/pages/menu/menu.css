@@ -20,6 +20,7 @@
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* Card */
@@ -27,7 +28,17 @@
   background-color: var(--bg-secondary);
   border-radius: 10px;
   overflow: hidden;
-  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Cuando el grid está visible */
+.grid:not(.fade-out) .card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .card:hover {
@@ -46,6 +57,10 @@
   padding: 15px;
 }
 
+.info h3 {
+  color: var(--text);
+}
+
 .info p {
   color: var(--accent);
 }
@@ -61,4 +76,48 @@
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.filters button {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
+}
+
+/* Hover */
+.filters button:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* Activo  */
+.filters button.active {
+  background: var(--accent);
+  color: #000;
+}
+
+
+
+.grid.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Fade in automático */
+.grid:not(.fade-out) {
+  opacity: 1;
 }

@@ -1,26 +1,30 @@
 <section class="menu-page">
   <div class="container">
 
-    <h1>Nuestro Menú</h1>
+    <h1>{{ 'MENU.TITLE' | translate }}</h1>
 
-    <div *ngFor="let category of categories" class="category">
+    <!-- 🔥 Filtros -->
+    <div class="filters">
 
-      <h2>{{ category }}</h2>
+      <button *ngFor="let category of categoriesWithAll" (click)="changeCategory(category)"
+        [class.active]="selectedCategory === category">
+        {{ ('MENU.PRODUCTS.' + category.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')) | translate }}
+      </button>
 
-      <div class="grid">
+    </div>
 
-        <div class="card" *ngFor="let product of getProductsByCategory(category)">
+    <!-- 🔥 Productos -->
+    <div class="grid" [class.fade-out]="isAnimating">
 
-          <div 
-            class="image"
-            [style.backgroundImage]="'url(' + product.image + ')'"
-          ></div>
+      <div class="card" 
+      *ngFor="let product of filteredProducts; let i = index"
+      [style.transitionDelay]="!isAnimating ? (i * 80) + 'ms' : '0ms'">
 
-          <div class="info">
-            <h3>{{ product.name }}</h3>
-            <p>{{ product.price }}</p>
-          </div>
+        <div class="image" [style.backgroundImage]="'url(' + product.image + ')'"></div>
 
+        <div class="info">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.price }}</p>
         </div>
 
       </div>

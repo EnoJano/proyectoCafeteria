@@ -1,20 +1,35 @@
-import { Component, HostListener } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { Theme } from '../../../core/services/theme';
 import { TranslateModule } from '@ngx-translate/core';
 import { Language } from '../../../core/services/language';
+import { Router, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule, RouterLink],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
 export class Navbar {
-  constructor(public themeService: Theme, public languageService: Language) { }
+  constructor(public themeService: Theme,
+    public languageService: Language,
+    private cdr: ChangeDetectorRef,
+    private router: Router) { }
 
 
   pulseActive = false;
+
+  isMenuPage = false;
+
+  ngOnInit() {
+    this.onScroll();
+
+    this.router.events.subscribe(() => {
+      this.isMenuPage = this.router.url.includes('menu');
+    });
+  }
 
   toggleTheme() {
     this.themeService.toggleTheme();
@@ -33,6 +48,33 @@ export class Navbar {
   activeSection: string = 'inicio';
 
   scrollTo(section: string) {
+
+
+    if (this.isMenuPage) {
+      this.router.navigate(['/']).then(() => {
+
+        setTimeout(() => {
+          const element = document.getElementById(section);
+
+          if (!element) return;
+
+          const navbar = document.querySelector('.navbar') as HTMLElement;
+          const navbarHeight = navbar?.offsetHeight || 80;
+
+          const y = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+          });
+
+        }, 150); 
+      });
+
+      return;
+    }
+
+
     const element = document.getElementById(section);
 
     if (!element) return;

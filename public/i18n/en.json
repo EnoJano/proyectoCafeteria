@@ -23,7 +23,12 @@
   },
   "MENU": {
     "TITLE": "Our Menu",
-    "BUTTON": "View Full Menu"
+    "BUTTON": "View Full Menu",
+    "PRODUCTS":{
+      "TODOS": "All",
+      "CAFE": "Cofees",
+      "POSTRES": "Desserts"
+    }
   },
   "MAP": {
     "TITLE": "Find Us",

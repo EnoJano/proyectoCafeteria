@@ -1,14 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './menu.html',
   styleUrl: './menu.css',
 })
 export class Menu {
+
+  constructor(private cdr: ChangeDetectorRef) { }
 
   products = [
     { name: 'Espresso', price: '$2.000', category: 'Café', image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?q=80&w=800' },
@@ -26,6 +29,39 @@ export class Menu {
 
   getProductsByCategory(category: string) {
     return this.products.filter(p => p.category === category);
+  }
+
+  selectedCategory: string = 'Todos';
+
+  get filteredProducts() {
+    if (this.selectedCategory === 'Todos') {
+      return this.products;
+    }
+    return this.products.filter(p => p.category === this.selectedCategory);
+  }
+
+  get categoriesWithAll() {
+    return ['Todos', ...new Set(this.products.map(p => p.category))];
+  }
+
+  isAnimating = false;
+
+  changeCategory(category: string) {
+    if (this.selectedCategory === category) return;
+
+    this.isAnimating = true;
+
+    setTimeout(() => {
+      this.selectedCategory = category;
+
+      this.cdr.detectChanges(); 
+
+      setTimeout(() => {
+        this.isAnimating = false;
+        this.cdr.detectChanges(); 
+      }, 50);
+
+    }, 300);
   }
 
 }
