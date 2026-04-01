@@ -21,6 +21,13 @@
       </li>
 
       <li>
+        <a (click)="scrollTo('about'); isMenuOpen = false" [class.active]="activeSection === 'about'" >
+          {{ 'NAV.ABOUT' | translate }}
+        </a>
+      </li>
+
+
+      <li>
         <a (click)="scrollTo('mapa'); isMenuOpen = false" [class.active]="activeSection === 'mapa'">
           {{ 'NAV.MAP' | translate }}
         </a>

@@ -2,7 +2,8 @@
   "NAV": {
     "HOME": "Home",
     "MENU": "Menu",
-    "MAP": "Location"
+    "MAP": "Location",
+    "ABOUT": "About Us"
   },
   "HERO": {
     "SLIDES": [

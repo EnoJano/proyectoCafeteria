@@ -98,7 +98,7 @@ export class Navbar {
 
   @HostListener('window:scroll', [])
   onScroll() {
-    const sections = ['inicio', 'menu', 'mapa'];
+    const sections = ['inicio', 'menu', 'mapa', 'about'];
 
     for (let section of sections) {
       const element = document.getElementById(section);

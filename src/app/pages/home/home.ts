@@ -3,11 +3,12 @@ import { Hero } from './sections/hero/hero';
 import { MenuPreview } from './sections/menu-preview/menu-preview';
 import { MapPreview } from './sections/map-preview/map-preview';
 import { ScrollAnimate } from '../../shared/directives/scroll-animate';
+import { About } from './sections/about/about';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [Hero, MenuPreview, MapPreview, ScrollAnimate],
+  imports: [Hero, MenuPreview, MapPreview, ScrollAnimate, About],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
