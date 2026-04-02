@@ -18,28 +18,38 @@ export class Testimonials implements OnInit, OnDestroy {
   currentIndex = 0;
   sub!: Subscription;
 
-  testimonials = [
-    {
-      name: 'María',
-      text: 'El mejor café que he probado, el ambiente es increíble.',
-      rating: 5
-    },
-    {
-      name: 'Carlos',
-      text: 'Un lugar perfecto para trabajar y relajarse.',
-      rating: 4   
-    },
-    {
-      name: 'Sofía',
-      text: 'La atención es excelente y el café espectacular.',
-      rating: 5
-    },
-    {
-      name: 'Pedro',
-      text: 'Muy buen ambiente, volvería sin dudarlo.', 
-      rating: 4
-    }
-  ];
+testimonials = [
+  {
+    name: 'María',
+    text: 'El mejor café que he probado.',
+    rating: 5,
+    image: 'https://randomuser.me/api/portraits/women/44.jpg'
+  },
+  {
+    name: 'Carlos',
+    text: 'Ambiente perfecto para trabajar.',
+    rating: 4,
+    image: 'https://randomuser.me/api/portraits/men/32.jpg'
+  },
+  {
+    name: 'Sofía',
+    text: 'Atención increíble.',
+    rating: 5,
+    image: 'https://randomuser.me/api/portraits/women/68.jpg'
+  },
+  {
+    name: 'Pedro',
+    text: 'Volvería mil veces.',
+    rating: 4,
+    image: 'https://randomuser.me/api/portraits/men/45.jpg'
+  },
+  {
+    name: 'Ana',
+    text: 'El café es espectacular.',
+    rating: 5,
+    image: 'https://randomuser.me/api/portraits/women/12.jpg'
+  }
+];
 
   ngOnInit() {
     this.zone.runOutsideAngular(() => {
