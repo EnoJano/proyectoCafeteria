@@ -1,0 +1,18 @@
+<section class="testimonials">
+
+  <h2>Lo que dicen nuestros clientes</h2>
+
+  <div class="carousel">
+
+    <div 
+      class="card"
+      *ngFor="let t of testimonials; let i = index"
+      [ngClass]="getClass(i)"
+    >
+      <p>"{{ t.text }}"</p>
+      <h4>- {{ t.name }}</h4>
+    </div>
+
+  </div>
+
+</section>

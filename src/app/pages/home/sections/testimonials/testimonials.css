@@ -1,0 +1,79 @@
+.testimonials {
+  padding: 100px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  height: 250px;
+}
+.carousel:hover .card {
+  animation-play-state: paused;
+}
+
+/* Base */
+.card {
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+  filter: blur(5px);
+
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Centro  */
+.card.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  filter: blur(0);
+  z-index: 3;
+}
+
+/* Izquierda */
+.card.prev {
+  transform: translate(-150%, -50%) scale(0.85);
+  opacity: 0.6;
+  filter: blur(2px);
+  z-index: 2;
+}
+
+/* Derecha */
+.card.next {
+  transform: translate(50%, -50%) scale(0.85);
+  opacity: 0.6;
+  filter: blur(2px);
+  z-index: 2;
+}
+
+/* Ocultos */
+.card.hidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+/* Texto */
+.card p {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.card h4 {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .card.prev,
+  .card.next {
+    display: none;
+  }
+}
