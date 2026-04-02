@@ -4,11 +4,12 @@
 
   <div class="carousel">
 
-    <div 
-      class="card"
-      *ngFor="let t of testimonials; let i = index"
-      [ngClass]="getClass(i)"
-    >
+    <div class="card" *ngFor="let t of testimonials; let i = index" [ngClass]="getClass(i)">
+      <div class="stars">
+        <span *ngFor="let star of [1,2,3,4,5]; let j = index">
+          <span class="blanco" [class.filled]="j < t.rating">★</span>
+        </span>
+      </div>
       <p>"{{ t.text }}"</p>
       <h4>- {{ t.name }}</h4>
     </div>

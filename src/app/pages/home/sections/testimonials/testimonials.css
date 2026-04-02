@@ -71,9 +71,31 @@
   color: var(--accent);
 }
 
+.blanco {
+  color: var(--text);
+}
+
 @media (max-width: 768px) {
   .card.prev,
   .card.next {
     display: none;
   }
+}
+
+/* Contenedor estrellas */
+.stars {
+  margin-bottom: 10px;
+}
+
+/* Estrellas base */
+.stars span {
+  font-size: 1.2rem;
+  color: #555;
+  transition: transform 0.2s ease;
+}
+
+/* Estrellas activas  */
+.stars span.filled {
+  color: #FFD700; /* dorado */
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
 }

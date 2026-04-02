@@ -13,7 +13,7 @@ import { interval, Subscription } from 'rxjs';
 export class Testimonials implements OnInit, OnDestroy {
 
   constructor(private cdr: ChangeDetectorRef,
-    private zone: NgZone) { }
+    private zone: NgZone) {}
 
   currentIndex = 0;
   sub!: Subscription;
@@ -21,19 +21,23 @@ export class Testimonials implements OnInit, OnDestroy {
   testimonials = [
     {
       name: 'María',
-      text: 'El mejor café que he probado, el ambiente es increíble.'
+      text: 'El mejor café que he probado, el ambiente es increíble.',
+      rating: 5
     },
     {
       name: 'Carlos',
-      text: 'Un lugar perfecto para trabajar y relajarse.'
+      text: 'Un lugar perfecto para trabajar y relajarse.',
+      rating: 4   
     },
     {
       name: 'Sofía',
-      text: 'La atención es excelente y el café espectacular.'
+      text: 'La atención es excelente y el café espectacular.',
+      rating: 5
     },
     {
       name: 'Pedro',
-      text: 'Muy buen ambiente, volvería sin dudarlo.'
+      text: 'Muy buen ambiente, volvería sin dudarlo.', 
+      rating: 4
     }
   ];
 
