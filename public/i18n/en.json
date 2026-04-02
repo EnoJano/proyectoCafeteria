@@ -22,12 +22,17 @@
     ],
     "BUTTON": "View Menu"
   },
+  "ABOUT": {
+    "TITLE": "About Us",
+    "DESCRIPTION": "At our café, we are passionate about providing a unique experience to every customer. From the selection of high-quality coffee beans to creating a welcoming atmosphere, every detail is designed so you can enjoy it to the fullest. Our team of expert baristas is dedicated to preparing each cup with care and precision, ensuring that every sip is a delight. Additionally, we offer a variety of options in our menu, from classic coffees to delicious desserts, to satisfy all tastes. Come discover why we are the favorite place for coffee lovers in the city.",
+    "DESCRIPTION2": "Our café was born with a passion for specialty coffee and the urban experience. From day one, we set out to create a space where coffee lovers could enjoy a unique experience, combining the quality of our products with a welcoming and modern atmosphere. Every cup we serve is the result of a careful selection of high-quality coffee beans, roasted to perfection to highlight their unique flavors and aromas. Additionally, our team of expert baristas is dedicated to preparing each drink with precision and care, ensuring that every sip is an unforgettable experience. At our café, we not only offer coffee but also a place where people can connect, relax, and enjoy special moments."
+  },
   "MENU": {
     "TITLE": "Our Menu",
     "BUTTON": "View Full Menu",
     "PRODUCTS":{
       "TODOS": "All",
-      "CAFE": "Cofees",
+      "CAFE": "CofFees",
       "POSTRES": "Desserts"
     }
   },

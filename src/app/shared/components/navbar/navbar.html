@@ -9,7 +9,7 @@
     <!-- Links -->
     <ul class="nav-links" [class.open]="isMenuOpen">
       <li>
-        <a (click)="scrollTo('inicio'); isMenuOpen = false" [class.active]="activeSection === 'inicio'" >
+        <a (click)="scrollTo('inicio'); isMenuOpen = false" [class.active]="activeSection === 'inicio'">
           {{ 'NAV.HOME' | translate }}
         </a>
       </li>
@@ -21,15 +21,14 @@
       </li>
 
       <li>
-        <a (click)="scrollTo('about'); isMenuOpen = false" [class.active]="activeSection === 'about'" >
-          {{ 'NAV.ABOUT' | translate }}
+        <a (click)="scrollTo('mapa'); isMenuOpen = false" [class.active]="activeSection === 'mapa'">
+          {{ 'NAV.MAP' | translate }}
         </a>
       </li>
 
-
       <li>
-        <a (click)="scrollTo('mapa'); isMenuOpen = false" [class.active]="activeSection === 'mapa'">
-          {{ 'NAV.MAP' | translate }}
+        <a (click)="scrollTo('about'); isMenuOpen = false" [class.active]="activeSection === 'about'">
+          {{ 'NAV.ABOUT' | translate }}
         </a>
       </li>
     </ul>

@@ -29,7 +29,7 @@
 }
 
 .content {
-  max-width: 600px;
+  max-width: AUTO;
   margin: 0 auto;
   color: var(--text-secondary);
 }

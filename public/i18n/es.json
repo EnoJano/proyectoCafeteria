@@ -31,6 +31,11 @@
       "POSTRES": "Postres"
     }
   },
+  "ABOUT": {
+    "TITLE": "Sobre nosotros",
+    "DESCRIPTION": "En nuestra cafetería, nos apasiona ofrecer una experiencia única a cada cliente. Desde la selección de granos de café de alta calidad hasta la creación de un ambiente acogedor, cada detalle está pensado para que disfrutes al máximo. Nuestro equipo de baristas expertos se dedica a preparar cada taza con cuidado y precisión, asegurando que cada sorbo sea una delicia. Además, ofrecemos una variedad de opciones en nuestro menú, desde clásicos cafés hasta deliciosos postres, para satisfacer todos los gustos. Ven y descubre por qué somos el lugar favorito de los amantes del café en la ciudad.",
+    "DESCRIPTION2": "Nuestra cafetería nace con la pasión por el café de especialidad y la experiencia urbana. Desde el primer día, nos propusimos crear un espacio donde los amantes del café pudieran disfrutar de una experiencia única, combinando la calidad de nuestros productos con un ambiente acogedor y moderno. Cada taza que servimos es el resultado de una cuidadosa selección de granos de café de alta calidad, tostados a la perfección para resaltar sus sabores y aromas únicos. Además, nuestro equipo de baristas expertos se dedica a preparar cada bebida con precisión y cariño, asegurando que cada sorbo sea una experiencia inolvidable. En nuestra cafetería, no solo ofrecemos café, sino también un lugar donde las personas pueden conectarse, relajarse y disfrutar de momentos especiales."
+  },
   "MAP": {
     "TITLE": "Cómo llegar",
     "LOCATION": "Nuestra ubicación",

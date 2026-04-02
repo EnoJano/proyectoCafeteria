@@ -2,13 +2,13 @@
 
     <div class="container">
 
-        <h2>Sobre nosotros</h2>
+        <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
 
         <!-- Carrusel -->
         <div class="carousel">
             <div class="image-wrapper">
 
-                <div class="image" *ngFor="let img of images; let i = index" [class.active]="i === currentIndex"
+                <div class="image" *ngFor="let img of slides; let i = index" [class.active]="i === currentIndex"
                     [style.backgroundImage]="'url(' + img + ')'"></div>
 
             </div>
@@ -17,11 +17,11 @@
         <!-- Texto -->
         <div class="content">
             <p>
-                Nuestra cafetería nace con la pasión por el café de especialidad y la experiencia urbana.
+                {{ 'ABOUT.DESCRIPTION' | translate }}
             </p>
-
+            <br>
             <p>
-                Cada taza cuenta una historia, cada espacio invita a quedarse.
+                {{ 'ABOUT.DESCRIPTION2' | translate }}
             </p>
         </div>
 
