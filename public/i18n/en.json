@@ -47,5 +47,10 @@
   "FOOTER":{
     "TITLE": "Specialty, passion, and flavor.",
     "SUBTITLE": "© 2026 Cafetería. All rights reserved."
+  },
+  "ERRORS": {
+    "ERROR": "ERROR 404",
+    "NOT_FOUND": "The page you are looking for does not exist",
+    "GO_HOME": "Go back home"
   }
 }
