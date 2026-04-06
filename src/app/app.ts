@@ -29,5 +29,6 @@ export class App {
 
   private updateLayout(url: string) {
     this.showLayout = !url.includes('not-found');
+    this.showLayout = !url.includes('admin/login');
   }
 }

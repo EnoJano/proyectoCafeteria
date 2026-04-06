@@ -52,5 +52,18 @@
     "ERROR": "ERROR 404",
     "NOT_FOUND": "The page you are looking for does not exist",
     "GO_HOME": "Go back home"
+  },
+  "ADMIN": {
+    "TITLE": "Admin Access",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "LOGIN_BTN": "Login",
+    "LOADING": "Loading...",
+    "LOGIN_ERROR": "Invalid email or password",
+    "ERROR_EMPTY_FIELDS": "Please enter your email and password",
+    "ERROR_EMPTY_EMAIL": "Please enter your email",
+    "ERROR_EMPTY_PASSWORD": "Please enter your password",
+    "ERROR_INVALID_EMAIL": "The email format is invalid",
+    "ERROR_TOO_MANY": "Too many failed attempts, please try again later"
   }
 }

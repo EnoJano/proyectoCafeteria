@@ -52,5 +52,18 @@
     "ERROR": "ERROR 404",
     "NOT_FOUND": "La página que buscas no existe",
     "GO_HOME": "Volver al inicio"
+  },
+  "ADMIN": {
+    "TITLE": "Acceso Administrador",
+    "EMAIL": "Correo electrónico",
+    "PASSWORD": "Contraseña",
+    "LOGIN_BTN": "Ingresar",
+    "LOADING": "Cargando...",
+    "LOGIN_ERROR": "Correo o contraseña incorrectos",
+    "ERROR_EMPTY_FIELDS": "Por favor ingresa tu correo y contraseña",
+    "ERROR_EMPTY_EMAIL": "Por favor ingresa tu correo",
+    "ERROR_EMPTY_PASSWORD": "Por favor ingresa tu contraseña",
+    "ERROR_INVALID_EMAIL": "El formato del correo no es válido",
+    "ERROR_TOO_MANY": "Demasiados intentos fallidos, intenta más tarde"
   }
 }

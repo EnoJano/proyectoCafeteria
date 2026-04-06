@@ -1,0 +1,47 @@
+<div class="login-page">
+
+  <div class="login-lang">
+    <button (click)="toggleLanguage()">
+      {{ languageService.getCurrentLang().toUpperCase() }}
+    </button>
+  </div>
+
+  <div class="login-box">
+    <div class="login-logo">☕</div>
+    <h2 class="login-title">{{ 'ADMIN.TITLE' | translate }}</h2>
+    <div class="login-divider"></div>
+
+    <div class="login-field">
+      <label>{{ 'ADMIN.EMAIL' | translate }}</label>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        placeholder="admin@cafeteria.com"
+        [disabled]="isLoading"
+      />
+    </div>
+
+    <div class="login-field">
+      <label>{{ 'ADMIN.PASSWORD' | translate }}</label>
+      <input
+        type="password"
+        [(ngModel)]="password"
+        placeholder="••••••••"
+        [disabled]="isLoading"
+      />
+    </div>
+
+    @if (errorMessage) {
+      <p class="login-error">{{ errorMessage | translate }}</p>
+    }
+
+    <button class="login-btn" (click)="onLogin()" [disabled]="isLoading">
+      @if (isLoading) {
+        {{ 'ADMIN.LOADING' | translate }}
+      } @else {
+        {{ 'ADMIN.LOGIN_BTN' | translate }}
+      }
+    </button>
+  </div>
+
+</div>
