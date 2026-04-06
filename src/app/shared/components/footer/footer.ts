@@ -44,4 +44,9 @@ export class Footer {
   toggleLanguage() {
     this.languageService.toggleLanguage();
   }
+
+  get isMenuPage(): boolean {
+  return this.router.url.includes('menu');
 }
+}
+

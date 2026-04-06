@@ -2,8 +2,9 @@ import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { Theme } from '../../../core/services/theme';
 import { TranslateModule } from '@ngx-translate/core';
 import { Language } from '../../../core/services/language';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -28,12 +29,18 @@ export class Navbar {
   ngOnInit() {
     this.onScroll();
 
-    this.router.events.subscribe(() => {
-      this.isMenuPage = this.router.url.includes('menu');
-    });
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.isMenuPage = this.router.url.includes('menu');
+
+        if (this.isMenuPage) {
+          this.activeSection = 'menu';
+        }
+      });
   }
 
-  toggleMenu(){
+  toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
@@ -74,7 +81,7 @@ export class Navbar {
             behavior: 'smooth'
           });
 
-        }, 150); 
+        }, 150);
       });
 
       return;

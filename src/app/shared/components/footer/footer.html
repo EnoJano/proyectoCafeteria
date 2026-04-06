@@ -12,9 +12,10 @@
       <a (click)="scrollTo('inicio')">
         {{ 'NAV.HOME' | translate }}
       </a>
-      <a (click)="scrollTo('menu')">
-        {{ 'NAV.MENU' | translate }}
-      </a>
+      <a (click)="!isMenuPage && scrollTo('menu')" 
+   [class.disabled]="isMenuPage">
+  {{ 'NAV.MENU' | translate }}
+</a>
       <a (click)="scrollTo('mapa')">
         {{ 'NAV.MAP' | translate }}
       </a>

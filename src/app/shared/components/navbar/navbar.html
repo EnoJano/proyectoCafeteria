@@ -15,7 +15,8 @@
       </li>
 
       <li>
-        <a (click)="scrollTo('menu'); isMenuOpen = false" [class.active]="activeSection === 'menu'">
+        <a (click)="!isMenuPage && scrollTo('menu'); isMenuOpen = false" [class.active]="activeSection === 'menu'"
+          [class.disabled]="isMenuPage">
           {{ 'NAV.MENU' | translate }}
         </a>
       </li>
